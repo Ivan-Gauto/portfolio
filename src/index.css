@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#gradient-canvas {
+  position: fixed;
+  /* fijo al viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* que cubra toda la ventana */
+  height: 100vh;
+  /* toda la altura */
+  z-index: -1;
+  /* detrás del contenido */
+
+  --gradient-color-1: #ffffff;
+  --gradient-color-2: #a9f09b;
+  --gradient-color-3: #61c747;
+  --gradient-color-4: #84ff6c;
+}
+
+.bg-transparent-light {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* blanco con 50% opacidad */
+}
+
+.hero-title {
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.card {
+  width: 25vw;
+  height: 70vh;
+  background: #313131;
+  border-radius: 20px;
+  color: white;
+  transition: 0.2s ease-in-out;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.textBox {
+  opacity: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.textBox>.text {
+  font-weight: bold;
+}
+
+.textBox>.head {
+  font-size: 20px;
+}
+
+.textBox>.price {
+  font-size: 17px;
+}
+
+.textBox>span {
+  font-size: 12px;
+  color: lightgrey;
+}
+
+.card:hover>.textBox {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.text-responsive {
+  font-size: 1rem;
+  /* tamaño base en móvil */
+}
+
+@media (min-width: 992px) {
+
+  /* lg y superior */
+  .text-responsive {
+    font-size: 1.5rem;
+    /* más grande en escritorio */
+  }
+}
