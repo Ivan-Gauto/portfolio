@@ -10,27 +10,28 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="hero d-flex mb-5 text-black flex-column justify-content-center align-items-center text-center vh-100">
-            <h1 className="hero-title m-0">
+        <header className="hero mx-5 d-flex text-white flex-column justify-content-start align-items-start text-center">
+            <h1 className="m-0 g-2">
                 <span
                     data-aos="fade-up"
                     data-aos-delay="300"
-                    className="hero-primary d-inline-block"
+                    className="hero-primary d-inline-block" 
                     style={{
-                        transform: `translateY(${offset * 0.1}px)`,
+                        transform: `translateX(${-offset * 0.15}px)`,
                         transition: "transform 0.1s linear",
-                        fontSize: "12vw",
+                        fontSize: "5vw",
                     }}
                 >
-                    Ivan Gauto.
-                    <br />
-                    Desarrollador.
+                    Ivan Gauto
+                    <span className="typing" style={{color: "lime"}}> Desarrollador</span>
+                    
                 </span>
 
             </h1>
             <p className="hero-subtitle" style={{
-                transform: `translateY(${offset * 0.15}px)`,
+                transform: `translateX(${offset * 0.15}px)`,
                 transition: "transform 0.1s linear",
+                fontSize: "1.5vw",
             }}>Front-End • React • UI</p>
         </header>
     );

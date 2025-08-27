@@ -10,6 +10,10 @@ button {
   background: var(--button_outline_color);
 }
 
+header {
+  margin: 200px;
+}
+
 .button_top {
   display: block;
   box-sizing: border-box;

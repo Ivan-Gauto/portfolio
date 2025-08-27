@@ -1,8 +1,211 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
+
+/* Fuente por defecto del sitio */
+:root{
+  --fs-body: 30px;                          /* tamaño base */
+  --fs-h1: clamp(28px, 3.2vw, 44px);        /* responsive */
+  --fs-h2: clamp(22px, 2.4vw, 32px);
+}
 
 body {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Pixelify Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  font-weight: 100; /* Montserrat funciona mejor a partir de 400 */
 }
+
+/* Títulos */
+h1{ font-size: var(--fs-h1); font-weight: 100; }
+h2{ font-size: var(--fs-h2); font-weight: 200; }
+
+/* Botones */
+.btn{
+  font-weight: 100;                         /* semibold */
+  letter-spacing: .2px;
+}
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid lime;  /* cursor */
+  width: 0;
+  animation: typing 3s steps(10, end) infinite, blink .8s step-end infinite;
+}
+
+@keyframes typing {
+  0%   { width: 0 }
+  40%  { width: 12ch }  /* se escribe */
+  60%  { width: 12ch }  /* se mantiene escrito */
+  100% { width: 0 }     /* se borra */
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+
+
+.ui-btn {
+  --btn-padding: 15px 20px;
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --hover-btn-color: lime;
+  --default-btn-color: #fff;
+  --font-size: 18px;
+  /* 👆 this field should not be empty */
+  --font-weight: 100;
+  --font-family: Pixelify Sans;
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover,
+.ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span,
+.ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before,
+.ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";}35%{content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+
+/* Texto “light” */
+.muted{ font-weight: 300; }
+
+/* Nota: Poppins soporta 100–900 pero solo los que pediste en el link se renderizan bien */
+
 
 html,
 body,

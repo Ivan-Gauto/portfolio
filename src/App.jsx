@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
+import Header from "./components/Header.jsx";
 import Projects from "./components/Projects";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import "./index.css";
 
 export default function App() {
@@ -24,8 +23,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-100 h-100">
-      <canvas id="gradient-canvas"></canvas>
+    <div className="bg-black">
+
       <Navbar />
       <Header />
       <Projects />
