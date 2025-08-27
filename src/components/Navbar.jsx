@@ -13,7 +13,7 @@ export default function Navbar() {
                             <span> Proyectos </span>
                         </button>
                         <button class="ui-btn">
-                            <span> Sobre mi </span>
+                            <span> Experiencia </span>
                         </button>
                         <button class="ui-btn">
                             <span> Contacto </span>

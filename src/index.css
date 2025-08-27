@@ -5,26 +5,22 @@
 /* Fuente por defecto del sitio */
 :root{
   --fs-body: 30px;                          /* tamaño base */
-  --fs-h1: clamp(28px, 3.2vw, 44px);        /* responsive */
+  --fs-h1: clamp(20px, 2.5vw, 44px);        /* responsive */
   --fs-h2: clamp(22px, 2.4vw, 32px);
+  --fs-p: clamp(20px, 3.4vw, 20px);
 }
 
 body {
   font-family: "Pixelify Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: var(--fs-body);
   line-height: 1.5;
-  font-weight: 100; /* Montserrat funciona mejor a partir de 400 */
+  font-weight: 100;
 }
 
 /* Títulos */
 h1{ font-size: var(--fs-h1); font-weight: 100; }
 h2{ font-size: var(--fs-h2); font-weight: 200; }
-
-/* Botones */
-.btn{
-  font-weight: 100;                         /* semibold */
-  letter-spacing: .2px;
-}
+p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
 
 .typing {
   white-space: nowrap;
@@ -54,12 +50,47 @@ h2{ font-size: var(--fs-h2); font-weight: 200; }
   --btn-animation-duration: 1.2s;
   --hover-btn-color: lime;
   --default-btn-color: #fff;
-  --font-size: 18px;
+  --font-size: 1.3vw;
   /* 👆 this field should not be empty */
   --font-weight: 100;
   --font-family: Pixelify Sans;
   /* 👆 this field should not be empty */
 }
+
+/* Loader animación */
+.loader {
+  width: 55px;
+  aspect-ratio: 1;
+  --g1: conic-gradient(from 90deg at 3px 3px ,#0000 90deg,#fff 0);
+  --g2: conic-gradient(from -90deg at 22px 22px,#0000 90deg,#fff 0);
+  background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  animation: l7 1.5s infinite;
+}
+
+@keyframes l7 {
+  0%   {background-position:0    0   ,0 100%,100% 100% }
+  25%  {background-position:100% 0   ,0 100%,100% 100% }
+  50%  {background-position:100% 0   ,0 0   ,100% 100% }
+  75%  {background-position:100% 0   ,0 0   ,0    100% }
+  100% {background-position:100% 100%,0 0   ,0    100% }
+}
+
+/* Fondo pantalla completa */
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black; /* o el color que quieras */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* encima de todo */
+}
+
 
 /* button settings 👆 */
 
