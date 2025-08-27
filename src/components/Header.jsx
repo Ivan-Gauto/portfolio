@@ -10,26 +10,21 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="hero container mx-5 d-flex text-white flex-column justify-content-start align-items-start text-center">
+    <header className="text-white container">
       
       {/* Anima el título al entrar */}
-      <div data-aos="fade-up" data-aos-delay="150">
-        <h1 className="m-0 g-2 mb-3">
-          <span
-            className="hero-primary d-inline-block"
-            style={{
-              transform: `translateX(${-offset * 0.1}px)`,
-              transition: "transform 0.1s linear",
-              fontSize: "4vw",
-            }}
-          >
-            Ivan Gauto
-            <span className="typing" style={{ color: "lime" }}> Desarrollador</span>
-          </span>
-        </h1>
+      <div className="text-start" data-aos="fade-up" data-aos-delay="150">
+        <div style={{
+          transform: `translateX(${-offset * 0.1}px)`,
+          transition: "transform 0.1s linear",
+        }}>
+          <h1 className="m-0">Ivan Gauto</h1>
+          <h1 className="typing" style={{ color: "lime" }}> Desarrollador</h1>
+        </div>
+
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="300">
+      <div className="" data-aos="fade-up" data-aos-delay="300">
         <p
           className="hero-subtitle text-start text-wrap border p-4"
           style={{

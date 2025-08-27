@@ -5,7 +5,7 @@
 /* Fuente por defecto del sitio */
 :root{
   --fs-body: 30px;                          /* tamaño base */
-  --fs-h1: clamp(20px, 2.5vw, 44px);        /* responsive */
+  --fs-h1: clamp(60px, 2.5vw, 54px);        /* responsive */
   --fs-h2: clamp(22px, 2.4vw, 32px);
   --fs-p: clamp(20px, 3.4vw, 20px);
 }
@@ -50,7 +50,7 @@ p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
   --btn-animation-duration: 1.2s;
   --hover-btn-color: lime;
   --default-btn-color: #fff;
-  --font-size: 1.3vw;
+  --font-size: 1.2rem;
   /* 👆 this field should not be empty */
   --font-weight: 100;
   --font-family: Pixelify Sans;
@@ -331,11 +331,13 @@ body,
   /* tamaño base en móvil */
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
 
   /* lg y superior */
-  .text-responsive {
-    font-size: 1.5rem;
-    /* más grande en escritorio */
+  h1 {
+    font-size: 7vw;
+  }
+  p {
+    font-size: 3vw;
   }
 }
