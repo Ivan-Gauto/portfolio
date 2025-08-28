@@ -36,9 +36,9 @@ export default function Experience() {
             ></div>
 
             {/* CONTENIDO */}
-            <h2 className="fw-light">{exp.year}</h2>
-            <p style={{color:"lime"}} className="m-0">{exp.title}</p>
-            <h3 className="text-secondary">{exp.description}</h3>
+            <h2 className="fw-light mb-4">{exp.year}</h2>
+            <h3 style={{color:"lime"}} className="m-0">{exp.title}</h3>
+            <p className="text-secondary m-0">{exp.description}</p>
           </div>
         ))}
       </div>

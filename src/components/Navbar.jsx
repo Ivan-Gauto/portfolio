@@ -8,7 +8,7 @@ export default function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
-                    <div className="navbar-nav mx-auto gap-5">
+                    <div className="navbar-nav mx-auto gap-4">
                         <button class="ui-btn">
                             <span> Proyectos </span>
                         </button>

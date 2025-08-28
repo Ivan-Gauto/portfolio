@@ -276,10 +276,10 @@ body,
 }
 
 .card {
-  width: 25vw;
-  height: 70vh;
+  width: 400px;
+  height: 400px;
   background: #313131;
-  border-radius: 20px;
+  border-radius: 0;
   color: white;
   transition: 0.2s ease-in-out;
   background-size: cover;
@@ -321,6 +321,20 @@ body,
 .card:hover>.textBox {
   opacity: 1;
 }
+
+/* Personalizar el ícono */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='square' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Personalizar el botón */
+.navbar-toggler {
+  border: 1px solid #ffffff;   /* borde blanco */
+  border-radius: 0;
+  padding: 3px;            /* esquinas rectas */
+}
+
+
 
 .card:hover {
   transform: scale(1.04) rotate(-1deg);
