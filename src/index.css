@@ -3,11 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
 
 /* Fuente por defecto del sitio */
-:root{
-  --fs-body: 30px;                          /* tamaño base */
-  --fs-h1: clamp(60px, 2.5vw, 54px);        /* responsive */
+:root {
+  --fs-body: 30px;
+  /* tamaño base */
+  --fs-h1: clamp(60px, 2.5vw, 54px);
+  /* responsive */
   --fs-h2: clamp(22px, 2.4vw, 32px);
-  --fs-p: clamp(20px, 3.4vw, 20px);
+  --fs-p: clamp(23px, 3.4vw, 23px);
 }
 
 body {
@@ -18,27 +20,57 @@ body {
 }
 
 /* Títulos */
-h1{ font-size: var(--fs-h1); font-weight: 100; }
-h2{ font-size: var(--fs-h2); font-weight: 200; }
-p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 100;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 200;
+}
+
+p {
+  font-size: var(--fs-p);
+  font-weight: 100;
+  letter-spacing: 1.2px;
+}
 
 .typing {
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid lime;  /* cursor */
+  border-right: 3px solid lime;
+  /* cursor */
   width: 0;
   animation: typing 3s steps(10, end) infinite, blink .8s step-end infinite;
 }
 
 @keyframes typing {
-  0%   { width: 0 }
-  40%  { width: 12ch }  /* se escribe */
-  60%  { width: 12ch }  /* se mantiene escrito */
-  100% { width: 0 }     /* se borra */
+  0% {
+    width: 0
+  }
+
+  40% {
+    width: 12ch
+  }
+
+  /* se escribe */
+  60% {
+    width: 12ch
+  }
+
+  /* se mantiene escrito */
+  100% {
+    width: 0
+  }
+
+  /* se borra */
 }
 
 @keyframes blink {
-  50% { border-color: transparent }
+  50% {
+    border-color: transparent
+  }
 }
 
 
@@ -61,8 +93,8 @@ p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
 .loader {
   width: 55px;
   aspect-ratio: 1;
-  --g1: conic-gradient(from 90deg at 3px 3px ,#0000 90deg,#fff 0);
-  --g2: conic-gradient(from -90deg at 22px 22px,#0000 90deg,#fff 0);
+  --g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #fff 0);
+  --g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #fff 0);
   background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
   background-size: 25px 25px;
   background-repeat: no-repeat;
@@ -70,11 +102,25 @@ p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
 }
 
 @keyframes l7 {
-  0%   {background-position:0    0   ,0 100%,100% 100% }
-  25%  {background-position:100% 0   ,0 100%,100% 100% }
-  50%  {background-position:100% 0   ,0 0   ,100% 100% }
-  75%  {background-position:100% 0   ,0 0   ,0    100% }
-  100% {background-position:100% 100%,0 0   ,0    100% }
+  0% {
+    background-position: 0 0, 0 100%, 100% 100%
+  }
+
+  25% {
+    background-position: 100% 0, 0 100%, 100% 100%
+  }
+
+  50% {
+    background-position: 100% 0, 0 0, 100% 100%
+  }
+
+  75% {
+    background-position: 100% 0, 0 0, 0 100%
+  }
+
+  100% {
+    background-position: 100% 100%, 0 0, 0 100%
+  }
 }
 
 /* Fondo pantalla completa */
@@ -84,11 +130,13 @@ p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
   left: 0;
   width: 100%;
   height: 100%;
-  background: black; /* o el color que quieras */
+  background: black;
+  /* o el color que quieras */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* encima de todo */
+  z-index: 9999;
+  /* encima de todo */
 }
 
 
@@ -166,7 +214,11 @@ p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
   }
 
   30% {
-    content: "#{+.";}35%{content: "@}-?";
+    content: "#{+.";
+  }
+
+  35% {
+    content: "@}-?";
   }
 
   40% {
@@ -233,7 +285,9 @@ p{ font-size: var(--fs-p); font-weight: 100; letter-spacing: 1.2px;}
 
 
 /* Texto “light” */
-.muted{ font-weight: 300; }
+.muted {
+  font-weight: 300;
+}
 
 /* Nota: Poppins soporta 100–900 pero solo los que pediste en el link se renderizan bien */
 
@@ -329,9 +383,11 @@ body,
 
 /* Personalizar el botón */
 .navbar-toggler {
-  border: 1px solid #ffffff;   /* borde blanco */
+  border: 1px solid #ffffff;
+  /* borde blanco */
   border-radius: 0;
-  padding: 3px;            /* esquinas rectas */
+  padding: 3px;
+  /* esquinas rectas */
 }
 
 
@@ -345,13 +401,31 @@ body,
   /* tamaño base en móvil */
 }
 
-@media (max-width: 992px) {
+.punto-timeline {
+  width: 15px;
+  height: 15px;
+  left: -8px;
+  margin-top: 11.3px;
+}
 
-  /* lg y superior */
+/* Ajustes para celular */
+@media (max-width: 992px) {
   h1 {
     font-size: 7vw;
   }
+
+  h2 {
+    font-size: 6vw;
+  }
+
   p {
-    font-size: 3vw;
+    font-size: 4vw;
+  }
+
+  .punto-timeline {
+    width: 15px;
+    height: 15px;
+    left: -8px;
+    margin-top: 7px;
   }
 }
