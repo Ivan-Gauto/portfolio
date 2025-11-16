@@ -19,7 +19,7 @@ export default function Header() {
           transition: "transform 0.1s linear",
         }}>
           <h1 className="m-0">Ivan Gauto</h1>
-          <h1 className="typing" style={{ color: "lime" }}> Desarrollador</h1>
+          <h1 className="typing mb-3" style={{ color: "lime" }}> Desarrollador</h1>
         </div>
 
       </div>
