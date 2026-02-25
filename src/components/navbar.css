@@ -1,13 +1,96 @@
 button {
-  --button_radius: 0.5em;        /* achico el borde redondeado */
+  --button_radius: 0.5em;
   --button_color: #e8e8e8;
   --button_outline_color: #000000;
-  font-size: 14px;               /* más chico que 17px */
+  font-size: 14px;
   font-weight: bold;
   border: none;
   cursor: pointer;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
+}
+
+.ui-btn {
+  --btn-padding: 15px 20px;
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --hover-btn-color: lime;
+  --default-btn-color: #ffffff;
+  --font-size: 1.5rem;
+  --font-weight: 100;
+}
+
+.ui-btn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  /* Usamos Roboto para que coincida con el cuerpo y los títulos */
+  font-family: "Roboto", sans-serif; 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  text-transform: none;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  font-family: inherit;
+}
+
+.loader {
+  width: 55px;
+  aspect-ratio: 1;
+  --g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #fff 0);
+  --g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #fff 0);
+  background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  animation: l7 1.5s infinite;
+}
+
+@media (hover: hover) {
+  .ui-btn:hover,
+  .ui-btn:focus {
+    background: var(--btn-hover-bg);
+  }
+  .ui-btn:hover span,
+  .ui-btn:focus span {
+    color: var(--hover-btn-color);
+  }
+  .ui-btn:hover span::before,
+  .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+  }
+}
+
+.ui-btn:active {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:active span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:active span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
 }
 
 header {

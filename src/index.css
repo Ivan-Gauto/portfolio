@@ -3,12 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 
-/* Fuente por defecto del sitio */
 :root {
   --fs-body: 30px;
-  /* tamaño base */
   --fs-h1: clamp(60px, 2.5vw, 54px);
-  /* responsive */
   --fs-h2: clamp(22px, 2.4vw, 32px);
   --fs-p: clamp(23px, 3.4vw, 23px);
 }
@@ -20,7 +17,6 @@ body {
   font-weight: 100;
 }
 
-/* Títulos */
 h1 {
   font-size: var(--fs-h1);
   font-weight: 100;
@@ -41,7 +37,6 @@ p {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid lime;
-  /* cursor */
   width: 0;
   animation: typing 4s steps(11, end) infinite, blink .8s step-end infinite;
 }
@@ -50,19 +45,15 @@ p {
   0% {
     width: 0
   }
-
- 40% {
-    width: 10.8ch /* <-- Prueba un valor menor si 14ch es mucho */
+  40% {
+    width: 10.8ch
   }
   60% {
-    width: 10.8ch /* <-- Prueba un valor menor si 14ch es mucho */
+    width: 10.8ch
   }
-
-  /* se mantiene escrito */
   100% {
     width: 0
   }
-  /* se borra */
 }
 
 @keyframes blink {
@@ -71,56 +62,24 @@ p {
   }
 }
 
-
-
-.ui-btn {
-  --btn-padding: 15px 20px;
-  --btn-transition: 0.3s;
-  --btn-letter-spacing: 0.1rem;
-  --btn-animation-duration: 1.2s;
-  --hover-btn-color: lime;
-  --default-btn-color: #fff;
-  --font-size: 1.2rem;
-  /* 👆 this field should not be empty */
-  --font-weight: 100;
-  /* 👆 this field should not be empty */
-}
-
-/* Loader animación */
-.loader {
-  width: 55px;
-  aspect-ratio: 1;
-  --g1: conic-gradient(from 90deg at 3px 3px, #0000 90deg, #fff 0);
-  --g2: conic-gradient(from -90deg at 22px 22px, #0000 90deg, #fff 0);
-  background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
-  background-size: 25px 25px;
-  background-repeat: no-repeat;
-  animation: l7 1.5s infinite;
-}
-
 @keyframes l7 {
   0% {
     background-position: 0 0, 0 100%, 100% 100%
   }
-
   25% {
     background-position: 100% 0, 0 100%, 100% 100%
   }
-
   50% {
     background-position: 100% 0, 0 0, 100% 100%
   }
-
   75% {
     background-position: 100% 0, 0 0, 0 100%
   }
-
   100% {
     background-position: 100% 100%, 0 0, 0 100%
   }
 }
 
-/* Fondo pantalla completa */
 .loader-wrapper {
   position: fixed;
   top: 0;
@@ -128,166 +87,15 @@ p {
   width: 100%;
   height: 100%;
   background: black;
-  /* o el color que quieras */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  /* encima de todo */
 }
 
-
-/* button settings 👆 */
-
-.ui-btn {
-  box-sizing: border-box;
-  padding: var(--btn-padding);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--default-btn-color);
-  font: var(--font-weight) var(--font-size) var(--font-family);
-  background: var(--btn-default-bg);
-  border: none;
-  cursor: pointer;
-  transition: var(--btn-transition);
-  overflow: hidden;
-  box-shadow: var(--btn-shadow);
-}
-
-.ui-btn span {
-  letter-spacing: var(--btn-letter-spacing);
-  transition: var(--btn-transition);
-  box-sizing: border-box;
-  position: relative;
-  background: inherit;
-}
-
-.ui-btn span::before {
-  box-sizing: border-box;
-  position: absolute;
-  content: "";
-  background: inherit;
-}
-
-.ui-btn:hover,
-.ui-btn:focus {
-  background: var(--btn-hover-bg);
-}
-
-.ui-btn:hover span,
-.ui-btn:focus span {
-  color: var(--hover-btn-color);
-}
-
-.ui-btn:hover span::before,
-.ui-btn:focus span::before {
-  animation: chitchat linear both var(--btn-animation-duration);
-}
-
-@keyframes chitchat {
-  0% {
-    content: "#";
-  }
-
-  5% {
-    content: ".";
-  }
-
-  10% {
-    content: "^{";
-  }
-
-  15% {
-    content: "-!";
-  }
-
-  20% {
-    content: "#$_";
-  }
-
-  25% {
-    content: "№:0";
-  }
-
-  30% {
-    content: "#{+.";
-  }
-
-  35% {
-    content: "@}-?";
-  }
-
-  40% {
-    content: "?{4@%";
-  }
-
-  45% {
-    content: "=.,^!";
-  }
-
-  50% {
-    content: "?2@%";
-  }
-
-  55% {
-    content: "\;1}]";
-  }
-
-  60% {
-    content: "?{%:%";
-    right: 0;
-  }
-
-  65% {
-    content: "|{f[4";
-    right: 0;
-  }
-
-  70% {
-    content: "{4%0%";
-    right: 0;
-  }
-
-  75% {
-    content: "'1_0<";
-    right: 0;
-  }
-
-  80% {
-    content: "{0%";
-    right: 0;
-  }
-
-  85% {
-    content: "]>'";
-    right: 0;
-  }
-
-  90% {
-    content: "4";
-    right: 0;
-  }
-
-  95% {
-    content: "2";
-    right: 0;
-  }
-
-  100% {
-    content: "";
-    right: 0;
-  }
-}
-
-
-/* Texto “light” */
 .muted {
   font-weight: 300;
 }
-
-/* Nota: Poppins soporta 100–900 pero solo los que pediste en el link se renderizan bien */
-
 
 html,
 body,
@@ -299,16 +107,11 @@ body,
 
 #gradient-canvas {
   position: fixed;
-  /* fijo al viewport */
   top: 0;
   left: 0;
   width: 100vw;
-  /* que cubra toda la ventana */
   height: 100vh;
-  /* toda la altura */
   z-index: -1;
-  /* detrás del contenido */
-
   --gradient-color-1: #ffffff;
   --gradient-color-2: #a9f09b;
   --gradient-color-3: #61c747;
@@ -317,7 +120,6 @@ body,
 
 .bg-transparent-light {
   background-color: rgba(255, 255, 255, 0.5);
-  /* blanco con 50% opacidad */
 }
 
 .hero-title {
@@ -326,76 +128,18 @@ body,
   line-height: 1.2;
 }
 
-.card {
-  width: 400px;
-  height: 400px;
-  background: #313131;
-  border-radius: 0;
-  color: white;
-  transition: 0.2s ease-in-out;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.textBox {
-  opacity: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s ease-in-out;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 12px;
-}
-
-.textBox>.text {
-  font-weight: bold;
-}
-
-.textBox>.head {
-  font-size: 20px;
-}
-
-.textBox>.price {
-  font-size: 17px;
-}
-
-.textBox>span {
-  font-size: 12px;
-  color: lightgrey;
-}
-
-.card:hover>.textBox {
-  opacity: 1;
-}
-
-/* Personalizar el ícono */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='square' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Personalizar el botón */
 .navbar-toggler {
   border: 1px solid #ffffff;
-  /* borde blanco */
   border-radius: 0;
   padding: 3px;
-  /* esquinas rectas */
-}
-
-
-
-.card:hover {
-  transform: scale(1.04) rotate(-1deg);
 }
 
 .text-responsive {
   font-size: 1rem;
-  /* tamaño base en móvil */
 }
 
 .punto-timeline {
@@ -405,24 +149,24 @@ body,
   margin-top: 11.3px;
 }
 
-/* Ajustes para celular */
 @media (max-width: 992px) {
   h1 {
     font-size: 7vw;
   }
-
   h2 {
     font-size: 6vw;
   }
-
   p {
     font-size: 4vw;
   }
-
   .punto-timeline {
     width: 15px;
     height: 15px;
     left: -8px;
     margin-top: 7px;
+  }
+  .card {
+    width: 300px;
+    height: 300px;
   }
 }
