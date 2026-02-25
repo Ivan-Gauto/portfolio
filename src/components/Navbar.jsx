@@ -16,6 +16,9 @@ export default function Navbar() {
                             <span> Experiencia </span>
                         </button>
                         <button class="ui-btn">
+                            <span> Herramientas </span>
+                        </button>
+                        <button class="ui-btn">
                             <span> Contacto </span>
                         </button>
                     </div>

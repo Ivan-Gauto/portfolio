@@ -1,0 +1,82 @@
+.contact-wrapper {
+  max-width: 900px;
+  padding: 50px 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s;
+  resize: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 1.3rem;
+  color: White;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  font-weight: 300;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-bottom: 1px solid lime;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+  top: -20px;
+  font-size: 1.2rem;
+  color: lime;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 40px 25px;
+    width: 90%;
+  }
+}
+
+.input-group input:-webkit-autofill,
+.input-group input:-webkit-autofill:hover, 
+.input-group input:-webkit-autofill:focus, 
+.input-group textarea:-webkit-autofill,
+.input-group textarea:-webkit-autofill:hover,
+.input-group textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input-group input:-webkit-autofill::first-line,
+.input-group textarea:-webkit-autofill::first-line {
+  font-size: 1.2rem !important;
+  font-family: 'Roboto', sans-serif !important;
+}

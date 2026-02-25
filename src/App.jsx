@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import TechCarousel from "./components/TechCarousel";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import Loader from "./components/Loader";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,6 +34,7 @@ export default function App() {
       <TechCarousel />
       <Experience />
       <Projects />
+      <Contact />
     </div>
   );
 }
