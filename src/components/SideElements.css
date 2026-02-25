@@ -1,0 +1,90 @@
+/* Contenedor general */
+.side-element {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Posiciones específicas */
+.side-left {
+  left: 40px;
+}
+
+.side-right {
+  right: 40px;
+}
+
+/* Contenedor de iconos */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.social-icon {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .social-icon:hover {
+    color: lime;
+    transform: translateY(-5px);
+  }
+}
+
+.social-icon:active {
+  color: lime;
+  transform: translateY(-5px);
+}
+
+/* Contenedor del dominio */
+.domain-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.domain-text {
+  writing-mode: vertical-rl; /* Hace que el texto se escriba de arriba hacia abajo */
+  text-orientation: mixed;
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .domain-text:hover {
+    color: lime;
+    transform: translateY(-5px);
+  }
+}
+
+.domain-text:active {
+  color: lime;
+  transform: translateY(-5px);
+}
+
+/* La línea que baja hasta el fondo */
+.vertical-line {
+  width: 1.8px;
+  height: 30vh;
+  background-color: white;
+}
+
+/* IMPORTANTE: Ocultar en tablets y celulares para no pisar el contenido */
+@media (max-width: 1080px) {
+  .side-element {
+    display: none;
+  }
+}
