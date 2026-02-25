@@ -1,4 +1,5 @@
 import Project1 from "../assets/Project1.webp";
+import "./Projects.css"
 
 export default function Projects() {
     return (

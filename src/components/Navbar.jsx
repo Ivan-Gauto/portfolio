@@ -1,8 +1,8 @@
-import "./navbar.css";
+import "./Navbar.css";
 
 export default function Navbar() {
     return (
-        <nav className="navbar-dark text-responsive color-black bg-transparent navbar-expand-lg sticky-top" data-bs-theme="light">
+        <nav className="navbar-dark text-responsive color-black bg-black navbar-expand-lg" data-bs-theme="light">
             <div className="container-fluid p-3">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
