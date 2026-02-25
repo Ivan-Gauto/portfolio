@@ -1,0 +1,116 @@
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  border-radius: 20px;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.track-left {
+  animation: scroll-left 45s linear infinite;
+}
+
+.track-right {
+  animation: scroll-right 40s linear infinite;
+}
+
+@media (hover: hover) {
+  .carousel-container:hover .track-left,
+  .carousel-container:hover .track-right {
+    animation-play-state: paused;
+  }
+}
+
+.carousel-container:active .track-left,
+.carousel-container:active .track-right {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  background: #1a1a1a;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid lime;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.tech-logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  /* Se eliminó el filtro grayscale y brightness aquí */
+  transition: 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .carousel-item:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    transform: scale(1.1);
+  }
+  /* Se eliminó la regla redundante para .tech-logo aquí */
+}
+
+.carousel-item:active {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  transform: scale(1.1);
+}
+/* Se eliminó la regla redundante para .tech-logo aquí */
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 992px) {
+  .carousel-container {
+    max-width: 90vw;
+  }
+  .carousel-item {
+    width: 55px;
+    height: 55px;
+    margin: 0 10px;
+  }
+  .tech-logo {
+    width: 25px;
+    height: 25px;
+  }
+}

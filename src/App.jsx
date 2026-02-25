@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import TechCarousel from "./components/TechCarousel";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Loader from "./components/Loader";
@@ -24,9 +25,10 @@ export default function App() {
   }
 
   return (
-    <div className="bg-black">
+    <div className="bg-black" style={{ overflowX: "hidden" }}>
       <Navbar />
       <Header />
+      <TechCarousel />
       <Experience />
       <Projects />
     </div>
