@@ -29,7 +29,6 @@ export default function Experience() {
               className="position-absolute bg-light punto-timeline"
             ></div>
 
-            {/* CONTENIDO */}
             <div data-aos="zoom-in" data-aos-delay="300">
               <h2 className="fw-light mb-3">{exp.year}</h2>
               <h3 style={{ color: "lime" }} className="m-0">{exp.title}</h3>

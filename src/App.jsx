@@ -17,13 +17,12 @@ export default function App() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: false, mirror: true });
 
-    // Simula tiempo de carga de la página
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
-    return <Loader />; // Muestra solo el loader
+    return <Loader />;
   }
 
   return (
