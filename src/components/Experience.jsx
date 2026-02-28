@@ -47,7 +47,7 @@ export default function Experience() {
 
                 <div data-aos="zoom-in" data-aos-delay="300">
                   <h2 className="fw-light mb-3">{exp.year}</h2>
-                  <h3 style={{ color: "lime" }} className="m-0">
+                  <h3 style={{ color: "lime" }} className="m-0 fw-light">
                     {exp.title}
                   </h3>
                   <p className="text-white m-0">{exp.description}</p>

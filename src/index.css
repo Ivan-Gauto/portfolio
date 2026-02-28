@@ -150,6 +150,30 @@ body,
   margin-top: 11.3px;
 }
 
+header {
+  margin: 200px;
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 0.1px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.7em 1em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  transform: translateY(0);
+}
+
 @media (max-width: 992px) {
   h1 {
     font-size: 7vw;

@@ -30,7 +30,7 @@ export default function Hero() {
                     transition: "transform 0.1s linear",
                   }}
                 >
-                  <h1 className="display-2 fw-bold m-0">Iván Gauto</h1>
+                  <p className="display-2 m-0">Iván Gauto</p>
                   <h2 className="typing mb-4" style={{ color: "lime" }}>
                     Desarrollador de Software
                   </h2>
@@ -55,8 +55,6 @@ export default function Hero() {
               {/* Botón de CV con el mismo efecto parallax sutil */}
               <div
                 className="mt-5"
-                data-aos="fade-up"
-                data-aos-delay="450"
                 style={{
                   transform: `translateX(${-offset * 0.05}px)`,
                   transition: "transform 0.1s linear",
@@ -67,6 +65,7 @@ export default function Hero() {
                   download="CV_Ivan_Gauto.pdf"
                   data-aos="fade-up"
                   data-aos-delay="450"
+                  data-aos-anchor="#inicio"
                   className="ui-btn justify-content-start p-0"
                   style={{ textDecoration: "none" }}
                 >
@@ -77,7 +76,7 @@ export default function Hero() {
 
             {/* Columna Derecha: Foto de Perfil */}
             <div
-              className="col-lg-5 text-center order-1 order-lg-2 mb-5 mb-lg-0"
+              className="col-lg-5 text-center order-1 order-lg-2 mb-0 mb-lg-0"
               data-aos="zoom-in"
               data-aos-delay="200"
             >

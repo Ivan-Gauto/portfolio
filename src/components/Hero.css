@@ -1,8 +1,7 @@
-/* Nuevo estilo para el cuadro de tu presentación */
 .hero-subtitle {
   background-color: rgba(0, 0, 0, 0.4);
-  border-left: 4px solid lime !important; /* Una línea verde a la izquierda como detalle */
-  border: 1px solid rgba(0, 255, 0, 0.1);
+  border-left: 4px solid lime !important;
+  border: 1.5px solid rgba(0, 255, 0, 0.1);
   color: white;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -12,7 +11,6 @@
   min-height: 80vh;
 }
 
-/* Estilos de la foto de perfil */
 .hero-img {
   width: 400px;
   height: 400px;
@@ -21,15 +19,21 @@
   border: 3px solid lime;
   box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform: translateZ(0); /* Anti-ghosting */
+  transform: translateZ(0);
 }
 
-.hero-img:hover {
-  transform: scale(1) translateZ(0);
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+@media (hover: hover) {
+  .hero-img:hover {
+    transform: scale(1.02) translateZ(0);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+  }
 }
 
-/* Animación de máquina de escribir opcional */
+.hero-img:active {
+  transform: scale(0.96) translateZ(0);
+  box-shadow: 0 0 35px rgba(0, 255, 0, 0.8);
+}
+
 .typing {
   overflow: hidden;
   white-space: nowrap;
@@ -59,7 +63,8 @@
 
 @media (max-width: 991px) {
   .hero-subtitle {
-    border-left: 1px solid rgba(0, 255, 0, 0.1) !important;
+    border-left: 2px solid lime !important;
+    border: 0px;
   }
   .hero-img {
     width: 220px;

@@ -11,48 +11,64 @@ button {
 }
 
 .ui-btn {
-  --btn-padding: 15px 20px;
-  --btn-transition: 0.3s;
-  --btn-letter-spacing: 0.1rem;
-  --btn-animation-duration: 1.2s;
+  --btn-padding: 10px 15px;
+  --btn-transition: 0.3s ease;
   --hover-btn-color: lime;
   --default-btn-color: #ffffff;
   --font-size: 1.3rem;
   --font-weight: 100;
-}
-
-.ui-btn {
   box-sizing: border-box;
   padding: var(--btn-padding);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--default-btn-color);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
-  /* Usamos Roboto para que coincida con el cuerpo y los títulos */
-  font-family: "Roboto", sans-serif; 
+  font-family: "Roboto", sans-serif;
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: var(--btn-transition);
-  overflow: hidden;
+  text-decoration: none;
   text-transform: none;
-}
-
-.ui-btn span::before {
-  box-sizing: border-box;
-  position: absolute;
-  content: "";
-  background: inherit;
+  transition: color var(--btn-transition);
 }
 
 .ui-btn span {
-  letter-spacing: var(--btn-letter-spacing);
-  transition: var(--btn-transition);
-  box-sizing: border-box;
-  position: relative;
-  font-family: inherit;
+  display: inline-block;
+  transition: transform var(--btn-transition), color var(--btn-transition);
+}
+
+@media (hover: hover) {
+  .ui-btn:hover {
+    color: var(--hover-btn-color);
+  }
+
+  .ui-btn:hover span {
+    transform: translateY(-3px);
+  }
+}
+
+.ui-btn:active {
+  color: var(--hover-btn-color);
+  background: transparent;
+}
+
+.ui-btn:active span {
+  transform: scale(0.95);
+  color: var(--hover-btn-color);
+}
+
+@media (max-width: 768px) {
+  .ui-btn {
+    padding: 0.5em 1em;
+    font-size: 1.5rem;
+    height: auto;
+  }
+
+  .ui-btn span {
+    font-size: 1.2rem;
+  }
 }
 
 .loader {
@@ -64,55 +80,4 @@ button {
   background-size: 25px 25px;
   background-repeat: no-repeat;
   animation: l7 1.5s infinite;
-}
-
-@media (hover: hover) {
-  .ui-btn:hover,
-  .ui-btn:focus {
-    background: var(--btn-hover-bg);
-  }
-  .ui-btn:hover span,
-  .ui-btn:focus span {
-    color: var(--hover-btn-color);
-  }
-  .ui-btn:hover span::before,
-  .ui-btn:focus span::before {
-    animation: chitchat linear both var(--btn-animation-duration);
-  }
-}
-
-.ui-btn:active {
-  background: var(--btn-hover-bg);
-}
-
-.ui-btn:active span {
-  color: var(--hover-btn-color);
-}
-
-.ui-btn:active span::before {
-  animation: chitchat linear both var(--btn-animation-duration);
-}
-
-header {
-  margin: 200px;
-}
-
-.button_top {
-  display: block;
-  box-sizing: border-box;
-  border: 0.1px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.7em 1em;           /* antes 0.75em 1.5em */
-  background: var(--button_color);
-  color: var(--button_outline_color);
-  transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
-}
-
-button:hover .button_top {
-  transform: translateY(-0.33em);
-}
-
-button:active .button_top {
-  transform: translateY(0);
 }

@@ -23,18 +23,18 @@ export default function Navbar() {
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav mx-auto gap-4">
-            <button class="ui-btn">
+            <a href="#proyectos" className="ui-btn">
               <span> Proyectos </span>
-            </button>
-            <button class="ui-btn">
+            </a>
+            <a href="#experiencia" className="ui-btn">
               <span> Experiencia </span>
-            </button>
-            <button class="ui-btn">
+            </a>
+            <a href="#herramientas" className="ui-btn">
               <span> Herramientas </span>
-            </button>
-            <button class="ui-btn">
+            </a>
+            <a href="#contacto" className="ui-btn">
               <span> Contacto </span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ export default function Contact() {
             <label htmlFor="message">Mensaje</label>
           </div>
 
-          <div className="d-flex flex-column align-items-center mt-5">
+          <div className="d-flex flex-column align-items-center mt-2">
             <button type="submit" className="ui-btn">
               <span>
                 {status === "success" ? "¡Enviado!" : "Enviar Mensaje"}
