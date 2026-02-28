@@ -1,7 +1,10 @@
+.container {
+  min-height: 80vh;
+}
+
 .carousel-container {
   overflow: hidden;
   position: relative;
-  width: 100%;
   background: rgba(0, 0, 0, 0.2);
   padding: 20px 0;
   border-radius: 20px;
@@ -91,13 +94,21 @@
 /* Se eliminó la regla redundante para .tech-logo aquí */
 
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scroll-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 992px) {

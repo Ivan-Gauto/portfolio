@@ -2,8 +2,6 @@
   max-width: 900px;
   padding: 50px 40px;
   border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .contact-form {
@@ -27,10 +25,15 @@
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   outline: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   transition: border-color 0.3s;
   resize: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-bottom: 1px solid lime;
 }
 
 .input-group label {
@@ -42,11 +45,6 @@
   pointer-events: none;
   transition: 0.3s ease all;
   font-weight: 300;
-}
-
-.input-group input:focus,
-.input-group textarea:focus {
-  border-bottom: 1px solid lime;
 }
 
 .input-group input:focus ~ label,
@@ -66,8 +64,8 @@
 }
 
 .input-group input:-webkit-autofill,
-.input-group input:-webkit-autofill:hover, 
-.input-group input:-webkit-autofill:focus, 
+.input-group input:-webkit-autofill:hover,
+.input-group input:-webkit-autofill:focus,
 .input-group textarea:-webkit-autofill,
 .input-group textarea:-webkit-autofill:hover,
 .input-group textarea:-webkit-autofill:focus {
@@ -78,5 +76,5 @@
 .input-group input:-webkit-autofill::first-line,
 .input-group textarea:-webkit-autofill::first-line {
   font-size: 1.2rem !important;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }

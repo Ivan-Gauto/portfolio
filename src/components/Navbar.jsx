@@ -1,30 +1,43 @@
 import "./Navbar.css";
 
 export default function Navbar() {
-    return (
-        <nav className="navbar-dark text-responsive color-black bg-black navbar-expand-lg" data-bs-theme="light">
-            <div className="container-fluid p-3">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
-                    <div className="navbar-nav mx-auto gap-4">
-                        <button class="ui-btn">
-                            <span> Proyectos </span>
-                        </button>
-                        <button class="ui-btn">
-                            <span> Experiencia </span>
-                        </button>
-                        <button class="ui-btn">
-                            <span> Herramientas </span>
-                        </button>
-                        <button class="ui-btn">
-                            <span> Contacto </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    );
+  return (
+    <nav
+      className="navbar-dark text-responsive color-black bg-black navbar-expand-lg fixed-top"
+      data-bs-theme="light"
+    >
+      <div className="container-fluid p-3">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse mx-auto"
+          id="navbarNavAltMarkup"
+        >
+          <div className="navbar-nav mx-auto gap-4">
+            <button class="ui-btn">
+              <span> Proyectos </span>
+            </button>
+            <button class="ui-btn">
+              <span> Experiencia </span>
+            </button>
+            <button class="ui-btn">
+              <span> Herramientas </span>
+            </button>
+            <button class="ui-btn">
+              <span> Contacto </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 }
-
