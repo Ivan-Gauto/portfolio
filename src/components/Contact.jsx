@@ -39,7 +39,7 @@ export default function Contact() {
       <div
         className="contact-wrapper mx-auto"
         data-aos="fade-right"
-        data-aos-delay="200"
+        data-aos-delay="100"
       >
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="input-group">
@@ -53,8 +53,8 @@ export default function Contact() {
           </div>
 
           <div className="input-group">
-            <input type="email" id="email" name="email" required />
-            <label htmlFor="email">Asunto</label>
+            <input type="text" id="subject" name="subject" required />
+            <label htmlFor="subject">Asunto</label>
           </div>
 
           <div className="input-group">

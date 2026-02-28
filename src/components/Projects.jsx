@@ -29,7 +29,7 @@ export default function Projects() {
         },
       ],
       image: Project1,
-      delay: "400",
+      delay: "200",
       description:
         "Plataforma e-commerce. Incluye autenticación de usuarios, panel de administración, base de datos, carga y gestión del catálogo de productos y carrito de compras.",
       link: "http://e-commerce-gauto-ivan.page.gd/",
@@ -48,7 +48,7 @@ export default function Projects() {
         },
       ],
       image: Project2,
-      delay: "500",
+      delay: "300",
       description:
         "Analizador de señales y espectros para poder comprender la composicion de las señales en el dominio del tiempo, la frecuencia y el ancho de banda",
       link: "#",
@@ -62,11 +62,7 @@ export default function Projects() {
     >
       <div className="row justify-content-center">
         <div className="col-12 col-lg-10">
-          <h1
-            data-aos="fade-right"
-            data-aos-delay="400"
-            className="text-center text-white mb-5"
-          >
+          <h1 data-aos="fade-right" className="text-center text-white mb-5">
             Proyectos
           </h1>
 

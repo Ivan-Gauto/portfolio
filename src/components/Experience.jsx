@@ -30,13 +30,13 @@ export default function Experience() {
         <div className="col-12 col-md-10 col-lg-8">
           <h1
             data-aos="fade-right"
-            data-aos-delay="400"
+            data-aos-delay="100"
             className="text-center mb-5"
           >
             Experiencia
           </h1>
 
-          <div className="timeline position-relative border-start border-2 border-light">
+          <div className="timeline position-relative border-start border-1 border-light">
             {experiences.map((exp, i) => (
               <div key={i} className="mb-5 ms-4">
                 <div

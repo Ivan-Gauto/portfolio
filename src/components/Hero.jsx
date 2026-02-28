@@ -63,13 +63,9 @@ export default function Hero() {
                 <a
                   href="/CV_Ivan_Gauto.pdf"
                   download="CV_Ivan_Gauto.pdf"
-                  data-aos="fade-up"
-                  data-aos-delay="450"
-                  data-aos-anchor="#inicio"
-                  className="ui-btn justify-content-start p-0"
-                  style={{ textDecoration: "none" }}
+                  className="btn-5 justify-content-start"
                 >
-                  <span>Descargar CV</span>
+                  <span>Descargar cv</span>
                 </a>
               </div>
             </div>

@@ -56,7 +56,7 @@
   text-orientation: mixed;
   color: white;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
   letter-spacing: 2px;
@@ -77,9 +77,9 @@
 
 /* La línea que baja hasta el fondo */
 .vertical-line {
-  width: 1.8px;
+  width: 1.2px;
   height: 30vh;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* IMPORTANTE: Ocultar en tablets y celulares para no pisar el contenido */
