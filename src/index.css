@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 
 :root {
   --fs-body: 30px;
@@ -11,7 +11,8 @@
 }
 
 body {
-  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
   font-size: var(--fs-body);
   line-height: 1.5;
   font-weight: 100;
@@ -38,45 +39,45 @@ p {
   overflow: hidden;
   border-right: 3px solid lime;
   width: 0;
-  animation: typing 4s steps(11, end) infinite, blink .8s step-end infinite;
+  animation: typing 4s steps(11, end) infinite, blink 0.8s step-end infinite;
 }
 
 @keyframes typing {
   0% {
-    width: 0
+    width: 0;
   }
   40% {
-    width: 10.8ch
+    width: 10.8ch;
   }
   60% {
-    width: 10.8ch
+    width: 10.8ch;
   }
   100% {
-    width: 0
+    width: 0;
   }
 }
 
 @keyframes blink {
   50% {
-    border-color: transparent
+    border-color: transparent;
   }
 }
 
 @keyframes l7 {
   0% {
-    background-position: 0 0, 0 100%, 100% 100%
+    background-position: 0 0, 0 100%, 100% 100%;
   }
   25% {
-    background-position: 100% 0, 0 100%, 100% 100%
+    background-position: 100% 0, 0 100%, 100% 100%;
   }
   50% {
-    background-position: 100% 0, 0 0, 100% 100%
+    background-position: 100% 0, 0 0, 100% 100%;
   }
   75% {
-    background-position: 100% 0, 0 0, 0 100%
+    background-position: 100% 0, 0 0, 0 100%;
   }
   100% {
-    background-position: 100% 100%, 0 0, 0 100%
+    background-position: 100% 100%, 0 0, 0 100%;
   }
 }
 

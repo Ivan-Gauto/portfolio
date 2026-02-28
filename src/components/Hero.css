@@ -1,0 +1,68 @@
+/* Nuevo estilo para el cuadro de tu presentación */
+.hero-subtitle {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-left: 4px solid lime !important; /* Una línea verde a la izquierda como detalle */
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-section {
+  min-height: 80vh;
+}
+
+/* Estilos de la foto de perfil */
+.hero-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid lime;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateZ(0); /* Anti-ghosting */
+}
+
+.hero-img:hover {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+}
+
+/* Animación de máquina de escribir opcional */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid lime;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: lime;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-subtitle {
+    border-left: 1px solid rgba(0, 255, 0, 0.1) !important;
+  }
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import SideElements from "./components/SideElements";
-import Header from "./components/Header";
+import Hero from "./components/Hero";
 import TechCarousel from "./components/TechCarousel";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
@@ -29,7 +29,7 @@ export default function App() {
     <div className="bg-black" style={{ overflowX: "hidden" }}>
       <Navbar />
       <SideElements />
-      <Header />
+      <Hero />
       <TechCarousel />
       <Experience />
       <Projects />
